@@ -131,33 +131,33 @@ public class PrintService {
         }
     }
 
-    public void comparePowerPoints(Grifidor[] grifidors, Slytherin[] slytherins, Hufflepuff[] hufflepuffs, Ravenclaw[] ravenclaws) {
-        Random random = new Random();
-        int randomIndex1 = random.nextInt(4); // генерация случайного числа для определения факультета
-        int randomIndex2 = random.nextInt(4); // генерация второго случайного числа для определения факультета
-        int i = random.nextInt(2); // генерация первого случайного числа для ученика
-        int j;
-        do {
-            j = random.nextInt(2); // генерация второго случайного числа для ученика
-        } while (i == j);
-        Hogwarts student1 = new Hogwarts(null, 0, 0);
-        Hogwarts student2 = new Hogwarts(null, 0, 0);
-        switch (randomIndex1) {
-            case 0 -> student1 = grifidors[i];
-            case 1 -> student1 = hufflepuffs[i];
-            case 2 -> student1 = ravenclaws[i];
-            case 3 -> student1 = slytherins[i];
-        }
-        switch (randomIndex2) {
-            case 0 -> student2 = grifidors[j];
-            case 1 -> student2 = hufflepuffs[j];
-            case 2 -> student2 = ravenclaws[j];
-            case 3 -> student2 = slytherins[j];
-        }
-        if (student1.getPowerOfSorcery()+student1.getTransgressingDistance() > student2.getPowerOfSorcery()+student2.getTransgressingDistance()){
-            System.out.println("У " + student1.getName() + " магия сильнее, чем у " + student2.getName());
-        } else {
-            System.out.println("У " + student2.getName() + " магия сильнее, чем у " + student1.getName());
-        }
-    }
+//    public void comparePowerPoints(Grifidor[] grifidors, Slytherin[] slytherins, Hufflepuff[] hufflepuffs, Ravenclaw[] ravenclaws) {
+//        Random random = new Random();
+//        int randomIndex1 = random.nextInt(4); // генерация случайного числа для определения факультета
+//        int randomIndex2 = random.nextInt(4); // генерация второго случайного числа для определения факультета
+//        int i = random.nextInt(2); // генерация первого случайного числа для ученика
+//        int j;
+//        do {
+//            j = random.nextInt(2); // генерация второго случайного числа для ученика
+//        } while (i == j);
+//        Hogwarts student1 = new Hogwarts(null, 0, 0);
+//        Hogwarts student2 = new Hogwarts(null, 0, 0);
+//        switch (randomIndex1) {
+//            case 0 -> student1 = grifidors[i];
+//            case 1 -> student1 = hufflepuffs[i];
+//            case 2 -> student1 = ravenclaws[i];
+//            case 3 -> student1 = slytherins[i];
+//        }
+//        switch (randomIndex2) {
+//            case 0 -> student2 = grifidors[j];
+//            case 1 -> student2 = hufflepuffs[j];
+//            case 2 -> student2 = ravenclaws[j];
+//            case 3 -> student2 = slytherins[j];
+//        }
+//        if (student1.getPowerOfSorcery()+student1.getTransgressingDistance() > student2.getPowerOfSorcery()+student2.getTransgressingDistance()){
+//            System.out.println("У " + student1.getName() + " магия сильнее, чем у " + student2.getName());
+//        } else {
+//            System.out.println("У " + student2.getName() + " магия сильнее, чем у " + student1.getName());
+//        }
+//    }
 }

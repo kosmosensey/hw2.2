@@ -20,23 +20,25 @@ public class Main {
                 new Ravenclaw("Падма Патил", 23, 52, 56, 21, 34, 65),
                 new Ravenclaw("Маркус Белби", 23, 52, 21, 52, 63, 12)
         };
-        PrintService printService = new PrintService();
-        printService.print(grifidors);
-        System.out.println("+ + + + + + +");
-        printService.print(hufflepuffs);
-        System.out.println("+ + + + + + +");
-        printService.print(ravenclaws);
-        System.out.println("+ + + + + + +");
-        printService.print(slytherins);
+        System.out.println("Грифиндор");
+        Grifidor.print(grifidors);
+        System.out.println("Пуффендуй");
+        Hufflepuff.print(hufflepuffs);
+        System.out.println("Когтевран");
+        Ravenclaw.print(ravenclaws);
+        System.out.println("Слизерин");
+        Slytherin.print(slytherins);
         System.out.println("_ _ _ _ _ _ ");
-        printService.compareFacultyScore(grifidors);
+        Grifidor.compareCharacteristic(grifidors);
         System.out.println("_ _ _ _ _ _ ");
-        printService.compareFacultyScore(hufflepuffs);
+        Hufflepuff.compareCharacteristic(hufflepuffs);
         System.out.println("_ _ _ _ _ _ ");
-        printService.compareFacultyScore(ravenclaws);
+        Ravenclaw.compareCharacteristic(ravenclaws);
         System.out.println("_ _ _ _ _ _ ");
-        printService.compareFacultyScore(slytherins);
+        Slytherin.compareCharacteristic(slytherins);
         System.out.println("_ + _ + _ + _ + _ + _ + _ + _ + _ + _ + ");
-        printService.comparePowerPoints(grifidors,slytherins,hufflepuffs,ravenclaws);
+//      printService.comparePowerPoints(grifidors, slytherins, hufflepuffs, ravenclaws);
+        Grifidor student = grifidors[0];
+        student.compareWith(slytherins[0]);
     }
 }
